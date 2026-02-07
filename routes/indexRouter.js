@@ -32,7 +32,8 @@ router.get("/message/:id", (req,res) =>{
 
   if(message){
     res.render("messageDetail",{
-      title:"Message Details",
+      title:"BRIANNA  Messageboard",
+      heading:"Message Details",
       message:message,
 
     });

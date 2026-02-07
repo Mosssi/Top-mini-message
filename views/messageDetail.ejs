@@ -4,14 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= title %></title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
-  <h1>Message Details</h1>
-  <p><strong>User:</strong> <%= message.user %></p>
-  <p><strong>Text:</strong> <%= message.text %></p>
-  <p><strong>Date:</strong> <%= message.added %></p>
+   <h1><%= title %></h1>
 
-  <a href=""/>Back to board</a>
+  <div class="message-card">
+    <h2><%= heading %></h2>
+    <p><strong>User:</strong> <%= message.user %></p>
+    <p><strong>Text:</strong> <%= message.text %></p>
+    <p><strong>Date:</strong> <%= message.added %></p>
+  </div>
+
+  <a href="/" class="button">Back to board</a>
   
 </body>
 </html>

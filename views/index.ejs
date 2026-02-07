@@ -7,14 +7,14 @@
   <title>
     <%= title %>
   </title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-  <h1>
-    <%= title %>
-  </h1>
-  <a href="/new">New writing</a>
+  <h1><%= title %></h1>
+  <a href="/new" class="button">New writing</a>
 
+  <main class="main">
   <ul>
     <% messages.forEach((message,index) => { %>
       <li>
@@ -24,22 +24,8 @@
       </li>
     <% }) %>
   </ul>
+  </main>
 
-
-  <ul>
-    <% messages.forEach(message => { %>
-      <li>
-        <strong>
-          <%= message.user %>
-        </strong>:
-        <%= message.text %>
-          <small>
-            <%= message.added %>
-          </small>
-
-      </li>
-      <% }) %>
-  </ul>
 
 </body>
 

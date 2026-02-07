@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const express = require("express");
 const indexRouter = require('./routes/indexRouter');
-const path = require('path');
+const path = require('node:path');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -17,7 +17,7 @@ app.use(express.json());
 
 //static files
 const assetsPath = path.join(__dirname,"Assets");
-app.use(express.static(assetsPath));
+app.use(express.static(path.join(__dirname,"public")));
 
 //routes
 app.use("/",indexRouter);
