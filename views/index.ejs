@@ -22,7 +22,11 @@
       <li>
         <strong><%= message.user %></strong>
         <%= message.text %>
-        <a href  ="/message/<%= index %>">Open</a>
+        <a href="#" class="open-btn"
+        data-user="<%= message.user %>"
+        data-text="<%= message.text %>"
+        data-date="<%= message.added %>">Open</a>
+
       </li>
     <% }) %>
   </ul>
@@ -39,11 +43,19 @@
         <input type="text" name="messageText" placeholder="Enter your message" required>
         <button type="submit" name="button" style="width:100%; margin-top:10px;">Submit</button>
       </form>
-
     </div>
-
   </div>
   
+
+  <div id="detailModal" class="modal">
+    <div class="modal-content">
+      <span class="close-detail">&times;</span>
+      <h2 id="detailUser" style="border-bottom:1px solid #eee; padding-bottom:10px;"></h2>
+      <p id="detailText" style="font-size:1.1rem; margin:20px 0"></p>
+      <p id="detailDate" style="color: #888; font-size:0.8em; text-align:right;"></p>
+    </div>
+  </div>
+
 
 
 </body>
