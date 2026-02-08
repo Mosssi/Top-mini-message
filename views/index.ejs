@@ -8,11 +8,13 @@
     <%= title %>
   </title>
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="/JS/script.js" defer></script>
 </head>
 
 <body>
   <h1><%= title %></h1>
-  <a href="/new" class="button">New writing</a>
+
+  <button type="button" class="button" id="myBtn">New writing</button>
 
   <main class="main">
   <ul>
@@ -24,7 +26,24 @@
       </li>
     <% }) %>
   </ul>
-  </main>
+</main>
+  
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+
+      <h2 style="text-align:center; margin-top:0;">Add New Message</h2>
+
+      <form method="POST" action="/new">
+        <input type="text" name="messageUser" placeholder="Enter your name" required>
+        <input type="text" name="messageText" placeholder="Enter your message" required>
+        <button type="submit" name="button" style="width:100%; margin-top:10px;">Submit</button>
+      </form>
+
+    </div>
+
+  </div>
+  
 
 
 </body>
